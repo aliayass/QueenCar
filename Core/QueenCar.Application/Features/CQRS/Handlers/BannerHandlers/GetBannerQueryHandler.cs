@@ -11,15 +11,15 @@ namespace QueenCar.Application.Features.CQRS.Handlers.BannerHandlers
 {
     public class GetBannerQueryHandler
     {
-        private readonly IRepository<Banner> _bannerRepository;
+        private readonly IRepository<Banner> _repository;
 
-        public GetBannerQueryHandler(IRepository<Banner> bannerRepository)
+        public GetBannerQueryHandler(IRepository<Banner> repository)
         {
-            _bannerRepository = bannerRepository;
+            _repository = repository;
         }
         public async Task<List<GetBannerQueryResult>> Handle()
         {
-            var values = await _bannerRepository.GetAllAsync();
+            var values = await _repository.GetAllAsync();
             return values.Select(x => new GetBannerQueryResult
             {
                 BannerId = x.BannerId,

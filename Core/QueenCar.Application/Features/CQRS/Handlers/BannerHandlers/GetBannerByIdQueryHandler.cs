@@ -20,6 +20,10 @@ namespace QueenCar.Application.Features.CQRS.Handlers.BannerHandlers
         public async Task<GetBannerByIdQueryResult> Handle(GetBannerByIdQuery query)
         {
             var x = await _repository.GetByIdAsync(query.Id);
+            if (x == null)
+            {
+                throw new Exception($"Id={query.Id} için kayıt bulunamadı");
+            }
             return new GetBannerByIdQueryResult
             {
                 BannerId = x.BannerId,
