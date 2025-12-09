@@ -1,6 +1,7 @@
 using QueenCar.Application.Features.CQRS.Commands.BannerCommands;
 using QueenCar.Application.Features.CQRS.Handlers.AboutHandlers;
 using QueenCar.Application.Features.CQRS.Handlers.BannerHandlers;
+using QueenCar.Application.Features.CQRS.Handlers.BrandHandlers;
 using QueenCar.Application.Interfaces;
 using QueenCar.Persistence.Context;
 using QueenCar.Persistence.Repositories;
@@ -24,6 +25,12 @@ builder.Services.AddScoped<UpdateBannerCommandHandler>();
 builder.Services.AddScoped<CreateBannerCommandHandler>();
 builder.Services.AddScoped<GetBannerQueryHandler>();
 builder.Services.AddScoped<GetBannerByIdQueryHandler>();
+// Brand Handlers
+builder.Services.AddScoped<GetBrandQueryHandler>();
+builder.Services.AddScoped<GetBrandByIdQueryHandler>();
+builder.Services.AddScoped<CreateBrandCommandHandler>();
+builder.Services.AddScoped<UpdateBrandCommandHandler>();
+builder.Services.AddScoped<RemoveBrandCommandHandler>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

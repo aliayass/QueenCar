@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace QueenCar.Application.Features.CQRS.Handlers.BrandHandlers
 {
-    public class CreateBrandQueryHandler
+    public class CreateBrandCommandHandler
     {
         private readonly IRepository<Brand> _repository;
-        public CreateBrandQueryHandler(IRepository<Brand> repository)
+        public CreateBrandCommandHandler(IRepository<Brand> repository)
         {
             _repository = repository;
         }

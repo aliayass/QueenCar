@@ -1,4 +1,5 @@
-﻿using QueenCar.Application.Features.CQRS.Results.BrandResults;
+﻿using QueenCar.Application.Features.CQRS.Queries.BrandQueries;
+using QueenCar.Application.Features.CQRS.Results.BrandResults;
 using QueenCar.Application.Interfaces;
 using QueenCar.Domain.Entities;
 using System;
@@ -16,12 +17,12 @@ namespace QueenCar.Application.Features.CQRS.Handlers.BrandHandlers
         {
             _repository = repository;
         }
-        public async Task<GetBrandByIdQeryResult> Handle(GetBrandByIdQeryResult query)
+        public async Task<GetBrandByIdQeryResult> Handle(GetBrandByIdQuery query)
         {
-            var x = await _repository.GetByIdAsync(query.BrandID);
+            var x = await _repository.GetByIdAsync(query.Id);
             if (x == null)
             {
-                throw new Exception($"Id={query.BrandID} için kayıt bulunamadı");
+                throw new Exception($"Id={query.Id} için kayıt bulunamadı");
             }
             return new GetBrandByIdQeryResult
             {
