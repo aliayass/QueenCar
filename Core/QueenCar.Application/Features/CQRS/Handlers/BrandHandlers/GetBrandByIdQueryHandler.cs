@@ -17,14 +17,14 @@ namespace QueenCar.Application.Features.CQRS.Handlers.BrandHandlers
         {
             _repository = repository;
         }
-        public async Task<GetBrandByIdQeryResult> Handle(GetBrandByIdQuery query)
+        public async Task<GetBrandByIdQueryResult> Handle(GetBrandByIdQuery query)
         {
             var x = await _repository.GetByIdAsync(query.Id);
             if (x == null)
             {
                 throw new Exception($"Id={query.Id} için kayıt bulunamadı");
             }
-            return new GetBrandByIdQeryResult
+            return new GetBrandByIdQueryResult
             {
                 BrandID = x.BrandID,
                 Name = x.Name
