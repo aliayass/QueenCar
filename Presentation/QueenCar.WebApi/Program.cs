@@ -3,8 +3,11 @@ using QueenCar.Application.Features.CQRS.Handlers.AboutHandlers;
 using QueenCar.Application.Features.CQRS.Handlers.BannerHandlers;
 using QueenCar.Application.Features.CQRS.Handlers.BrandHandlers;
 using QueenCar.Application.Features.CQRS.Handlers.CarHandlers;
+using QueenCar.Application.Features.CQRS.Handlers.CategoryHandlers;
+using QueenCar.Application.Features.CQRS.Handlers.ContactHandlers;
 using QueenCar.Application.Interfaces;
 using QueenCar.Application.Interfaces.CarInterfaces;
+using QueenCar.Application.Services;
 using QueenCar.Persistence.Context;
 using QueenCar.Persistence.Repositories;
 using QueenCar.Persistence.Repositories.CarRepository;
@@ -42,6 +45,20 @@ builder.Services.AddScoped<CreateCarCommandHandler>();
 builder.Services.AddScoped<UpdateCarCommandHandler>();
 builder.Services.AddScoped<RemoveCarCommandHandler>();
 builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
+//Category Handlers
+builder.Services.AddScoped<GetCategoryQueryHandler>();
+builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
+builder.Services.AddScoped<CreateCategoryCommandHandler>();
+builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+//Contact Handlers
+builder.Services.AddScoped<GetContactByIdQueryHandler>();
+builder.Services.AddScoped<GetContactQueryHandler>();
+builder.Services.AddScoped<UpdateContactCommandHandler>();
+builder.Services.AddScoped<RemoveContactCommandHandler>();
+builder.Services.AddScoped<CreateContactCommandHandler>();
+
+builder.Services.AddApplicationServices(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

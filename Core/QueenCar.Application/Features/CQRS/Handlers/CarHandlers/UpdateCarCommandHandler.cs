@@ -22,7 +22,6 @@ namespace QueenCar.Application.Features.CQRS.Handlers.CarHandlers
             var value = await _repository.GetByIdAsync(command.CarID);
             if(value == null)
                 throw new Exception($"Id={command.CarID} için kayıt bulunamadı");
-            value.CarID = command.CarID;
             value.BrandID = command.BrandID;
             value.Model = command.Model;
             value.CoverImageUrl = command.CoverImageUrl;

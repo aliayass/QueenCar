@@ -25,7 +25,6 @@ namespace QueenCar.Application.Features.CQRS.Handlers.BrandHandlers
             {
                 throw new Exception($"Id={command.BrandID} için kayıt bulunamadı");
             }
-            values.BrandID = command.BrandID;
             values.Name = command.Name;
             await _repository.UpdateAsync(values);
         }
