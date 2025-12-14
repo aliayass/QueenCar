@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueenCar.Domain.Entities
+namespace QueenCar.Application.Features.Mediator.Results.ServiceResults
 {
-    public class Service
+    public class GetServiceByIdQueryResult
     {
         public int ServiceID { get; set; }
         public string Title { get; set; }
