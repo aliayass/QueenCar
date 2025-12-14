@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace QueenCar.Application.Features.Mediator.Handlers.ServiceHandlers
 {
-    public class UpdateServiceCommandHandler : IRequestHandler<UpdateServiceCommand>
+    public class UpdateSocialMediaCommandHandler : IRequestHandler<UpdateServiceCommand>
     {
         private readonly IRepository<Service> _repository;
 
-        public UpdateServiceCommandHandler(IRepository<Service> repository)
+        public UpdateSocialMediaCommandHandler(IRepository<Service> repository)
         {
             _repository = repository;
         }

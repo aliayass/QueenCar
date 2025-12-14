@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace QueenCar.Application.Features.Mediator.Handlers.ServiceHandlers
 {
-    public class GetServiceByIdQueryHandler : IRequestHandler<GetServiceByIdQuery, GetServiceByIdQueryResult>
+    public class GetSocialMediaByIdQueryHandler : IRequestHandler<GetServiceByIdQuery, GetServiceByIdQueryResult>
     {
         private readonly IRepository<Service> _repository;
 
-        public GetServiceByIdQueryHandler(IRepository<Service> repository)
+        public GetSocialMediaByIdQueryHandler(IRepository<Service> repository)
         {
             _repository = repository;
         }

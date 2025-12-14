@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using QueenCar.Application.Features.Mediator.Commands.ServiceCommands;
+using QueenCar.Application.Features.Mediator.Commands.SocialMediaCommands;
 using QueenCar.Application.Interfaces;
 using QueenCar.Domain.Entities;
 using System;
@@ -8,18 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueenCar.Application.Features.Mediator.Handlers.ServiceHandlers
+namespace QueenCar.Application.Features.Mediator.Handlers.SocialMediaHandlers
 {
-    public class RemoveSocialMediaCommandHandler : IRequestHandler<RemoveServiceCommand>
+    public class RemoveSocialMediaCommandHandler : IRequestHandler<RemoveSocialMediaCommand>
     {
-        private readonly IRepository<Service> _repository;
+        private readonly IRepository<SocialMedia> _repository;
 
-        public RemoveSocialMediaCommandHandler(IRepository<Service> repository)
+        public RemoveSocialMediaCommandHandler(IRepository<SocialMedia> repository)
         {
             _repository = repository;
         }
 
-        public async Task Handle(RemoveServiceCommand request, CancellationToken cancellationToken)
+        public async Task Handle(RemoveSocialMediaCommand request, CancellationToken cancellationToken)
         {
             var value = await _repository.GetByIdAsync(request.Id);
             if (value == null)
