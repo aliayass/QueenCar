@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using QueenCar.Application.Features.Mediator.Commands.ServiceCommands;
+using QueenCar.Application.Features.Mediator.Commands.TestimonialCommands;
 using QueenCar.Application.Interfaces;
 using QueenCar.Domain.Entities;
 using System;
@@ -8,18 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueenCar.Application.Features.Mediator.Handlers.ServiceHandlers
+namespace QueenCar.Application.Features.Mediator.Handlers.TestimonialHandlers
 {
-    public class RemoveServiceCommandHandler : IRequestHandler<RemoveServiceCommand>
+    public class RemoveTestimonialCommandHandler : IRequestHandler<RemoveTestimonialCommand>
     {
-        private readonly IRepository<Service> _repository;
+        private readonly IRepository<Testimonial> _repository;
 
-        public RemoveServiceCommandHandler(IRepository<Service> repository)
+        public RemoveTestimonialCommandHandler(IRepository<Testimonial> repository)
         {
             _repository = repository;
         }
 
-        public async Task Handle(RemoveServiceCommand request, CancellationToken cancellationToken)
+        public async Task Handle(RemoveTestimonialCommand request, CancellationToken cancellationToken)
         {
             var value = await _repository.GetByIdAsync(request.Id);
             if (value == null)

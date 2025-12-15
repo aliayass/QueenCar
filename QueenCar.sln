@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueenCar.WebUI", "Frontends\QueenCar.WebUI\QueenCar.WebUI.csproj", "{AA48A52A-5C8A-412F-8DFA-B21069C77CB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueenCar.Dto", "Frontends\QueenCar.Dto\QueenCar.Dto.csproj", "{BB8EA37E-619A-471F-B941-3567F885E16C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{AA48A52A-5C8A-412F-8DFA-B21069C77CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA48A52A-5C8A-412F-8DFA-B21069C77CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA48A52A-5C8A-412F-8DFA-B21069C77CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB8EA37E-619A-471F-B941-3567F885E16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB8EA37E-619A-471F-B941-3567F885E16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB8EA37E-619A-471F-B941-3567F885E16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB8EA37E-619A-471F-B941-3567F885E16C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{D1FBFDD0-AE2E-4595-A0D2-3EBB3159634B} = {E0535507-5EB4-4851-A10D-F458D54E7CA3}
 		{916CA0BC-27F5-4C5C-9DC6-72364DE5C040} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{AA48A52A-5C8A-412F-8DFA-B21069C77CB4} = {345BA8FB-C076-4764-B094-02F35FF178F1}
+		{BB8EA37E-619A-471F-B941-3567F885E16C} = {345BA8FB-C076-4764-B094-02F35FF178F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19666139-847D-49D7-92F2-88046B8E72CE}

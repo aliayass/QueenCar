@@ -10,15 +10,13 @@ using System.Threading.Tasks;
 
 namespace QueenCar.Application.Features.Mediator.Handlers.ServiceHandlers
 {
-    public class CreateSocialMediaCommandHandler : IRequestHandler<CreateServiceCommand>
+    public class CreateServiceCommandHandler : IRequestHandler<CreateServiceCommand>
     {
         private readonly IRepository<Service> _repository;
-
-        public CreateSocialMediaCommandHandler(IRepository<Service> repository)
+        public CreateServiceCommandHandler(IRepository<Service> repository)
         {
             _repository = repository;
         }
-
         public async Task Handle(CreateServiceCommand request, CancellationToken cancellationToken)
         {
             await _repository.CreateAsync(new Service
@@ -26,7 +24,6 @@ namespace QueenCar.Application.Features.Mediator.Handlers.ServiceHandlers
                 Title = request.Title,
                 Description = request.Description,
                 IconUrl = request.IconUrl
-
             });
         }
     }

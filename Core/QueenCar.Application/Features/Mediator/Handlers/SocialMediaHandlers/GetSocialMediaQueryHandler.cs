@@ -22,7 +22,7 @@ namespace QueenCar.Application.Features.Mediator.Handlers.SocialMediaHandlers
 
         public async Task<List<GetSocialMediaQueryResult>> Handle(GetSocialMediaQuery request, CancellationToken cancellationToken)
         {
-            var values  =  await _repository.GetAllAsync();
+            var values = await _repository.GetAllAsync();
             return values.Select(x => new GetSocialMediaQueryResult
             {
                 SocialMediaID = x.SocialMediaID,
